@@ -41,3 +41,20 @@ Fruits:
     
     ```
    * In above example, mail is a group of servers.
+   * Inventory Parameters
+        * ansible_connection
+             * ssh
+             * winrm
+             * localhost
+        * ansible_port
+             * 22
+             * 5986
+        * ansible_user
+             * root
+             * administrator
+        * ansible_ssh_pass
+             * Password
+    * Ansible Vault
+        * For storing passwords
+    
+             
