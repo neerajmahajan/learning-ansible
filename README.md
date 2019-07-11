@@ -56,5 +56,15 @@ Fruits:
              * Password
     * Ansible Vault
         * For storing passwords
+     ```
+     #Sample Inventory File
+     
+     web ansible_host=Server1.company.com ansible_connection=ssh ansible_user=root
+     db ansible_host=Server2.company.com ansible_connection=winrm ansible_user=admin
+     mail ansible_host=Server3.company.com ansible_connection=ssh ansible_ssh_pass=P@hhhh
+     web2 ansible_host=Server4.company.com ansible_connection=winrm
+     
+     localhost ansible_connection=localhost
+     ```
     
              
