@@ -102,4 +102,5 @@ Fruits:
     
      ```
     * Host used in the playbook should be defined in the inventory file.
-             
+    * Action run by task are called modules eg command,script,yum
+    * Run ansible playbook can be running by ansible-playbook <playbook-name>
