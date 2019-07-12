@@ -66,5 +66,40 @@ Fruits:
      
      localhost ansible_connection=localhost
      ```
+     * In above example web,db,mail,web2 are just alias names.
+     
+     
+  ##### Ansible Playbooks
+  
+  * Playbook is written in an YAML.
+  * Play defines a set ot activities (task) to be run on hosts.
+  * Task is an action to be performed on the host
+       * It can be executing a command
+       * Run a script
+       * Install a package
+       * Shutdown/Restart
+   * ```
+   'Simple Ansible Playbook1.yml
+   -
+      name: Play 1
+      hosts: localhost
+      tasks:
+          - name: Execute command `date`
+            command: date
+            
+          - name: Execute script on server
+            script: test_scripts.sh
+            
+          - name: Install httpd service
+            yum:
+               name: httpd
+               state: present
+          
+          - name: Start web server
+            service:
+                name: http
+                state: started
+    
+     ```
     
              
