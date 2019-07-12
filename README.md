@@ -78,8 +78,8 @@ Fruits:
        * Run a script
        * Install a package
        * Shutdown/Restart
-   * ```
-   'Simple Ansible Playbook1.yml
+  ```
+   #Simple Ansible Playbook1.yml
    -
       name: Play 1
       hosts: localhost
