@@ -101,5 +101,5 @@ Fruits:
                 state: started
     
      ```
-    
+    * Host used in the playbook should be defined in the inventory file.
              
