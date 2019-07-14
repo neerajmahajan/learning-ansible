@@ -1,5 +1,11 @@
 # learning-ansible
 
+* Ansible Control machine can only be linux and not windows
+* However windows machines can be target of Ansible.
+* Ansible connects to a windows machine using winrm.
+* python pywinrm is required for using winrm.
+* galaxy.ansible.com contains lot of roles already created.
+
 ##### YAML
 
 * Key: Value
@@ -85,7 +91,7 @@ Fruits:
       hosts: localhost
       tasks:
           - name: Execute command `date`
-            command: date
+            command: cat resolve.conf chdir=/etc
             
           - name: Execute script on server
             script: test_scripts.sh
@@ -104,3 +110,54 @@ Fruits:
     * Host used in the playbook should be defined in the inventory file.
     * Action run by task are called modules eg command,script,yum
     * Run ansible playbook can be running by ansible-playbook <playbook-name>
+ 
+ ##### Modules example
+ 
+ * System
+    * Actions to be performed at system level
+    * User
+    * Group
+    * Hostname
+    * Iptables
+    * Make
+    * Mount
+    * Ping
+    * Timezone
+    * systemd
+    * Service    
+ * Command
+    * Command
+    * Expect (Interactive)
+    * Raw
+    * Script
+    * Shell
+ * Files
+    * find
+    * copy
+    * Archieve
+    * Replace
+    * Stat
+    * Template
+ * Database
+    * Mongodb
+    * Mysql
+    * Postgressql
+    * vertica
+       
+ * Cloud
+    * Amazon
+    * Azure
+    * Docker
+    * Google
+    * Openstack
+ * Windows
+    * Win_copy
+    * Win_command
+    * Win_domain
+ * etc
+#### Include
+* It is used to include yml files eg tasks, playbooks
+* vars_files:
+    - variables.yml
+#### Roles 
+   * Organise into structure
